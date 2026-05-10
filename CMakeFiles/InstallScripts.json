@@ -1,0 +1,7 @@
+{
+	"InstallScripts" : 
+	[
+		"/home/namotyl/Repos/hexapod/cmake_install.cmake"
+	],
+	"Parallel" : false
+}

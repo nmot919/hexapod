@@ -1,0 +1,3 @@
+/home/namotyl/Repos/hexapod/CMakeFiles/hexapod.dir
+/home/namotyl/Repos/hexapod/CMakeFiles/edit_cache.dir
+/home/namotyl/Repos/hexapod/CMakeFiles/rebuild_cache.dir
