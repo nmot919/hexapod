@@ -37,6 +37,11 @@ void HexapodBody::setLegTarget(int i, vec3 target){
     mLegs[i].setTargetFootPos(target);
 }
 
+void HexapodBody::setLegTarget(std::array<vec3, NUM_LEGS> targets){
+    for(int i = 0; i < NUM_LEGS; i++){
+        mLegs[i].setTargetFootPos(targets[i]);
+    }
+}
 
 void HexapodBody::buildLegs(){
         mLegs.clear();

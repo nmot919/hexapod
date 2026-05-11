@@ -14,7 +14,6 @@ using namespace std;
 
 class Leg {
   public:
-    //Leg(vec3 targetFootPos, vec3 outDir, float a);
     Leg(vec3 outDir);
     void setTargetFootPos(vec3 targetFootPos);
     vec3 getTargetFootPos();

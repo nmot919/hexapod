@@ -201,6 +201,30 @@ src/Leg.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod.dir/build.make CMakeFiles/hexapod.dir/src/Leg.cpp.s
 .PHONY : src/Leg.cpp.s
 
+src/TripodGait.o: src/TripodGait.cpp.o
+.PHONY : src/TripodGait.o
+
+# target to build an object file
+src/TripodGait.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod.dir/build.make CMakeFiles/hexapod.dir/src/TripodGait.cpp.o
+.PHONY : src/TripodGait.cpp.o
+
+src/TripodGait.i: src/TripodGait.cpp.i
+.PHONY : src/TripodGait.i
+
+# target to preprocess a source file
+src/TripodGait.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod.dir/build.make CMakeFiles/hexapod.dir/src/TripodGait.cpp.i
+.PHONY : src/TripodGait.cpp.i
+
+src/TripodGait.s: src/TripodGait.cpp.s
+.PHONY : src/TripodGait.s
+
+# target to generate assembly for a file
+src/TripodGait.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod.dir/build.make CMakeFiles/hexapod.dir/src/TripodGait.cpp.s
+.PHONY : src/TripodGait.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -219,6 +243,9 @@ help:
 	@echo "... src/Leg.o"
 	@echo "... src/Leg.i"
 	@echo "... src/Leg.s"
+	@echo "... src/TripodGait.o"
+	@echo "... src/TripodGait.i"
+	@echo "... src/TripodGait.s"
 .PHONY : help
 
 

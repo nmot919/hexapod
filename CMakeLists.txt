@@ -12,6 +12,7 @@ ci_make_app(
     SOURCES     src/HexapodApp.cpp
                 src/Leg.cpp
                 src/HexapodBody.cpp
+                src/TripodGait.cpp
     CINDER_PATH ${CINDER_PATH}
 )
 

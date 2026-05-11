@@ -42,6 +42,7 @@ vec3 getLegLength();
 
 vec3 getLegTarget(int i);
 void setLegTarget(int i, vec3 target);
+void setLegTarget(std::array<vec3, NUM_LEGS> targets);
 
 private:
 

@@ -6,6 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/hexapod.dir/src/HexapodBody.cpp.o.d"
   "CMakeFiles/hexapod.dir/src/Leg.cpp.o"
   "CMakeFiles/hexapod.dir/src/Leg.cpp.o.d"
+  "CMakeFiles/hexapod.dir/src/TripodGait.cpp.o"
+  "CMakeFiles/hexapod.dir/src/TripodGait.cpp.o.d"
   "build/Debug/hexapod"
   "build/Debug/hexapod.pdb"
 )

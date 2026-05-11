@@ -85,12 +85,12 @@ clean: CMakeFiles/hexapod.dir/clean
 CMakeFiles/hexapod.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod.dir/build.make CMakeFiles/hexapod.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod.dir/build.make CMakeFiles/hexapod.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/namotyl/Repos/hexapod/CMakeFiles --progress-num=1,2,3,4 "Built target hexapod"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/namotyl/Repos/hexapod/CMakeFiles --progress-num=1,2,3,4,5 "Built target hexapod"
 .PHONY : CMakeFiles/hexapod.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/hexapod.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/namotyl/Repos/hexapod/CMakeFiles 4
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/namotyl/Repos/hexapod/CMakeFiles 5
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/hexapod.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/namotyl/Repos/hexapod/CMakeFiles 0
 .PHONY : CMakeFiles/hexapod.dir/rule
@@ -102,7 +102,7 @@ hexapod: CMakeFiles/hexapod.dir/rule
 # codegen rule for target.
 CMakeFiles/hexapod.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/hexapod.dir/build.make CMakeFiles/hexapod.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/namotyl/Repos/hexapod/CMakeFiles --progress-num=1,2,3,4 "Finished codegen for target hexapod"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/home/namotyl/Repos/hexapod/CMakeFiles --progress-num=1,2,3,4,5 "Finished codegen for target hexapod"
 .PHONY : CMakeFiles/hexapod.dir/codegen
 
 # clean rule for target.

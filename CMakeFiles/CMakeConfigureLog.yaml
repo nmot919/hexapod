@@ -4864,3 +4864,216 @@ events:
         - "/usr/pkg"
         - "/opt"
 ...
+
+---
+events:
+  -
+    kind: "find_package-v1"
+    backtrace:
+      - "/home/namotyl/Repos/Cinder/proj/cmake/modules/cinderMakeApp.cmake:113 (find_package)"
+      - "CMakeLists.txt:10 (ci_make_app)"
+    name: "cinder"
+    configs:
+      -
+        filename: "cinder.cps"
+        kind: "cps"
+      -
+        filename: "cinderConfig.cmake"
+        kind: "cmake"
+      -
+        filename: "cinder-config.cmake"
+        kind: "cmake"
+    version_request:
+      exact: false
+    settings:
+      required: "required_explicit"
+      quiet: false
+      global: false
+      policy_scope: true
+      bypass_provider: false
+      names:
+        - "cinder"
+      search_paths:
+        - "/home/namotyl/Repos/Cinder/lib/linux/x86_64/ogl/Debug"
+        - "/lib/linux/x86_64/ogl/Debug"
+      path_suffixes:
+        - ""
+      paths:
+        CMAKE_FIND_USE_CMAKE_PATH: true
+        CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
+        CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
+        CMAKE_FIND_USE_INSTALL_PREFIX: true
+        CMAKE_FIND_USE_PACKAGE_ROOT_PATH: true
+        CMAKE_FIND_USE_CMAKE_PACKAGE_REGISTRY: true
+        CMAKE_FIND_USE_SYSTEM_PACKAGE_REGISTRY: true
+        CMAKE_FIND_ROOT_PATH_MODE: "BOTH"
+    candidates:
+      -
+        path: "/home/namotyl/Repos/hexapod/CMakeFiles/pkgRedirects/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/namotyl/Repos/hexapod/CMakeFiles/pkgRedirects/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/home/namotyl/Repos/hexapod/CMakeFiles/pkgRedirects/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/home/namotyl/Repos/hexapod/CMakeFiles/pkgRedirects/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/local/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/local/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/lib/jvm/default/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/site_perl/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/vendor_perl/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/usr/bin/core_perl/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/cinderConfig.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/cinder-config.cmake"
+        mode: "config"
+        reason: "no_exist"
+      -
+        path: "/opt/lib/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+      -
+        path: "/opt/share/cps/cinder.cps"
+        mode: "cps"
+        reason: "no_exist"
+    found:
+      path: "/home/namotyl/Repos/Cinder/lib/linux/x86_64/ogl/Debug/cinderConfig.cmake"
+      mode: "config"
+      version: ""
+    search_context:
+      ENV{PATH}:
+        - "/usr/local/sbin"
+        - "/usr/local/bin"
+        - "/usr/bin"
+        - "/usr/lib/jvm/default/bin"
+        - "/usr/bin/site_perl"
+        - "/usr/bin/vendor_perl"
+        - "/usr/bin/core_perl"
+      CMAKE_INSTALL_PREFIX: "/usr/local"
+      CMAKE_SYSTEM_PREFIX_PATH:
+        - "/usr/local"
+        - "/usr"
+        - "/"
+        - "/usr"
+        - "/usr/local"
+        - "/usr/X11R6"
+        - "/usr/pkg"
+        - "/opt"
+...

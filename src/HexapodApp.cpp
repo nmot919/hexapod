@@ -3,6 +3,7 @@
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Batch.h"
 #include "cinder/CinderImGui.h"
+#include <array>
 #include <cinder/CinderMath.h>
 #include <cinder/Color.h>
 #include <cinder/GeomIo.h>
@@ -17,6 +18,7 @@
 #include <vector>
 #include "Leg.h"
 #include "HexapodBody.h"
+#include "TripodGait.h"
 
 using namespace ci;
 using namespace ci::app;
@@ -44,7 +46,9 @@ private:
     gl::BatchRef mPlane;
 
     HexapodBody mHexapodBody;
+    TripodGait mTripodGait;
 
+    vec3  mMoveDir = vec3(0);
     float mGravity       = -9.8f;
     float mRestitution   = 0.2f;
     float mPlaneSize     = 100.0f;
@@ -97,7 +101,7 @@ void HexapodApp::setup() {
     mHexapodBody = HexapodBody(vec3(0, STARTING_Y, 0));
 }
 
-void HexapodApp::update() {
+void HexapodApp::update() { // used to simulate time and physics
     float dt = 1.0f / getFrameRate();
 
     vec3 vel = mHexapodBody.getVelocity();
@@ -128,6 +132,9 @@ void HexapodApp::update() {
     mHexapodBody.setPosition(pos);
     mHexapodBody.setVelocity(vel);
 
+    std::array<vec3, NUM_LEGS> target = mTripodGait.getGaitTarget(dt);
+    mHexapodBody.setLegTarget(target);
+
 }
 
 void HexapodApp::drawTargetFootPositions(){
@@ -154,9 +161,9 @@ void HexapodApp::drawScene() {
     gl::setMatrices(mCam);
 
     mPlane->draw();
-    drawAxes(2.0, vec3(-2, 0, -2));
+    //drawAxes(2.0, vec3(-2, 0, -2));
     mHexapodBody.draw();
-    drawTargetFootPositions();
+    //drawTargetFootPositions();
 }
 
 
@@ -168,6 +175,17 @@ void HexapodApp::drawUI() {
 
     if (ImGui::CollapsingHeader("Hexapod", ImGuiTreeNodeFlags_DefaultOpen)) {
         if (ImGui::Button("Reset")) mHexapodBody.reset();
+
+        if(ImGui::DragFloat3("MoveDir", &mMoveDir, 0.01f, -5.0f, 5.0f)){
+            mTripodGait.setMoveDir(mMoveDir);
+        }
+        vec3 pos = mHexapodBody.getPosition();
+        vec3 vel = mHexapodBody.getVelocity();
+
+        ImGui::Text("Body Position: %.2f  %.2f  %.2f",
+            pos.x, pos.y, pos.z);
+        ImGui::Text("Body Velocity: %.2f  %.2f  %.2f",
+            vel.x, vel.y, vel.z);
 
         ImGui::Separator();
         if(ImGui::CollapsingHeader("Joint Lengths")){
@@ -194,23 +212,13 @@ void HexapodApp::drawUI() {
     }
 
     ImGui::Separator();
-
-    vec3 pos = mHexapodBody.getPosition();
-    vec3 vel = mHexapodBody.getVelocity();
-
-    ImGui::Text("Pos: %.2f  %.2f  %.2f",
-            pos.x, pos.y, pos.z);
-    ImGui::Text("Vel: %.2f  %.2f  %.2f",
-            vel.x, vel.y, vel.z);
-
-    ImGui::Separator();
     if(ImGui::CollapsingHeader("Target Foot Positions")){
     vector<Leg> legs = mHexapodBody.getLegs();
     for(int i = 0; i < legs.size(); i++){
         vec3 target = legs[i].getTargetFootPos();
         char label[32];
         snprintf(label, sizeof(label), "Foot[%d]:", i);
-        if(ImGui::DragFloat3(label, &target, 0.05f, 0, 10.0f)){
+        if(ImGui::DragFloat3(label, &target, 0.01f, -5.0f, 5.0f)){
             mHexapodBody.setLegTarget(i, target);
         }
     }

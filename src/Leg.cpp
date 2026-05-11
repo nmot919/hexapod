@@ -109,7 +109,7 @@
 
     // takes target foot position which is in local coordinates and computes the required angle coxa, femur, and tibia angles required
     // to reach that foot position
-void Leg::IK_Solver(){
+    void Leg::IK_Solver(){
 
   vec3 t = targetFootPos - localOffset;
   float targetAngle = atan2(t.x, t.z);
@@ -118,6 +118,10 @@ void Leg::IK_Solver(){
 
   float horizontal = sqrt(t.x*t.x + t.z*t.z) - lengths.x;
   float L = sqrt(t.y*t.y + horizontal*horizontal);
+  float maxReach = lengths.y + lengths.z;
+  float minReach = abs(lengths.y - lengths.z);
+  if(L > maxReach) L = maxReach - 0.005f;
+  if(L < minReach) L = minReach + 0.005f;
 
   float alpha1 = acos(-t.y/L);
   float alpha2 = acos((lengths.z*lengths.z - lengths.y*lengths.y - L*L)/(-2*lengths.y*L));

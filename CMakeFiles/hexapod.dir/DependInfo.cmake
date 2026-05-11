@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/namotyl/Repos/hexapod/src/HexapodApp.cpp" "CMakeFiles/hexapod.dir/src/HexapodApp.cpp.o" "gcc" "CMakeFiles/hexapod.dir/src/HexapodApp.cpp.o.d"
   "/home/namotyl/Repos/hexapod/src/HexapodBody.cpp" "CMakeFiles/hexapod.dir/src/HexapodBody.cpp.o" "gcc" "CMakeFiles/hexapod.dir/src/HexapodBody.cpp.o.d"
   "/home/namotyl/Repos/hexapod/src/Leg.cpp" "CMakeFiles/hexapod.dir/src/Leg.cpp.o" "gcc" "CMakeFiles/hexapod.dir/src/Leg.cpp.o.d"
+  "/home/namotyl/Repos/hexapod/src/TripodGait.cpp" "CMakeFiles/hexapod.dir/src/TripodGait.cpp.o" "gcc" "CMakeFiles/hexapod.dir/src/TripodGait.cpp.o.d"
   "" "build/Debug/hexapod" "gcc" "CMakeFiles/hexapod.dir/link.d"
   )
 
