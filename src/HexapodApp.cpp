@@ -205,20 +205,12 @@ void HexapodApp::drawUI() {
             mAxesPos = vec3(-2.0, 0, -2.0);
         }
 
-        if(ImGui::DragFloat3("MoveDir", &mMoveDir, 0.01f, -5.0f, 5.0f)){
+        if(ImGui::DragFloat3("MoveDir", &mMoveDir, 0.05f, -1.0f, 1.0f)){
             mTripodGait.setMoveDir(mMoveDir);
         }
 
-        /*if(ImGui::SliderFloat("Yaw", &mYaw, -360.0f, 360.0f)){
-            float rYaw = toRadians(mYaw);
-            //mTripodGait.setYaw(rYaw);
-            mHexapodBody.setYaw(rYaw);
-        }*/
-
 
         if(ImGui::SliderFloat("TurnRate", &mTurnRate, -1.0f, 1.0f)){
-            //float rYaw = toRadians(mYaw);
-            //mHexapodBody.setYaw(rYaw);
             mTripodGait.setTurnRate(mTurnRate);
         }
 
