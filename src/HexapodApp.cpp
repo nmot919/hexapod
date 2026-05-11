@@ -58,6 +58,7 @@ private:
     float mCamAngle      = 45.0f;
 
     bool  mDrawGui       = true;
+    bool mDrawAxes = false;
 };
 
 
@@ -161,7 +162,7 @@ void HexapodApp::drawScene() {
     gl::setMatrices(mCam);
 
     mPlane->draw();
-    //drawAxes(2.0, vec3(-2, 0, -2));
+    if(mDrawAxes) drawAxes(2.0, vec3(-2, 0, -2));
     mHexapodBody.draw();
     //drawTargetFootPositions();
 }
@@ -175,6 +176,7 @@ void HexapodApp::drawUI() {
 
     if (ImGui::CollapsingHeader("Hexapod", ImGuiTreeNodeFlags_DefaultOpen)) {
         if (ImGui::Button("Reset")) mHexapodBody.reset();
+            ImGui::Checkbox("Draw Axes", &mDrawAxes);
 
         if(ImGui::DragFloat3("MoveDir", &mMoveDir, 0.01f, -5.0f, 5.0f)){
             mTripodGait.setMoveDir(mMoveDir);

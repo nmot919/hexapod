@@ -144,3 +144,25 @@ ipch/
 
 # Visual Studio Trace Files
 *.e2e
+
+# Build artifacts
+build/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+cmake_install.cmake
+compile_commands.json
+
+# ImGui state
+imgui.ini
+
+screenshots/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.user
