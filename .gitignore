@@ -166,3 +166,4 @@ Thumbs.db
 .vscode/
 .idea/
 *.user
+.cache/
