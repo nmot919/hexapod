@@ -1,6 +1,7 @@
 #pragma once
 #include "cinder/gl/gl.h"
 #include "cinder/gl/Batch.h"
+#include <array>
 #include <cinder/CinderMath.h>
 #include <cinder/Color.h>
 #include <cinder/GeomIo.h>
@@ -26,6 +27,9 @@ vec3 getMoveDir();
 
 void setTurnRate(float tr);
 float getTurnRate();
+
+void setRestTargets(std::array<vec3, NUM_LEGS> t);
+std::array<vec3, NUM_LEGS> getRestTargets();
 
 private:
 int groupA[3] = {0, 2, 4};

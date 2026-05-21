@@ -62,3 +62,11 @@ void TripodGait::setTurnRate(float tr){
 float TripodGait::getTurnRate(){
     return this->mTurnRate;
 }
+
+void TripodGait::setRestTargets(std::array<vec3, NUM_LEGS> t){
+    this->mRestTargets = t;
+}
+
+std::array<vec3, NUM_LEGS> TripodGait::getRestTargets(){
+    return this->mRestTargets;
+}
