@@ -1,4 +1,5 @@
 #include <cmath>
+#define VEC_H
 // used for vectors not dependent on cinder when compiling for microcontroller
 
 struct Vec3 {

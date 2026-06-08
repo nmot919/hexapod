@@ -1,8 +1,15 @@
-#include <Adafruit_PWMServoDriver.h>
+
+#ifndef VEC_H
 #include "../math/Vec3.h"
+using vec3 = Vec3;
+#endif
+
+#include <Adafruit_PWMServoDriver.h>
 #ifndef ARDUINO
 #include <Arduino.h>
 #endif
+
+
 
 #define MAX_CHANNEL_PER_BOARD 16
 #define PWM_FREQ 50

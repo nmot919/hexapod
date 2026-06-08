@@ -16,7 +16,7 @@ ServoController* ServoController::getInstance(){
     return _instance;
 }
 
-ServoController::writeLeg(int leg, vec3 anglesDeg){
+void ServoController::writeLeg(int leg, vec3 anglesDeg){
 
     setAngle(leg * 3 + 0, anglesDeg.x);
     setAngle(leg * 3 + 1, anglesDeg.y);
@@ -24,7 +24,7 @@ ServoController::writeLeg(int leg, vec3 anglesDeg){
 
 }
 
-ServoController::setAngle(uint8_t channel, float deg){
+void ServoController::setAngle(uint8_t channel, float deg){
     deg = constrain(deg, 0, 180);
     uint16_t pulse = (uint16_t)(SERVO_MIN + (deg / 180.0f) * (SERVO_MAX - SERVO_MIN));
 
