@@ -3,10 +3,10 @@
 ServoController* ServoController::_instance = nullptr;
 
 ServoController::ServoController(){
-    pwm1.begin();
-    pwm1.setPWMFreq(PWM_FREQ);
-    pwm2.begin();
-    pwm2.setPWMFreq(PWM_FREQ);
+    priPwm.begin();
+    priPwm.setPWMFreq(PWM_FREQ);
+    secPwm.begin();
+    secPwm.setPWMFreq(PWM_FREQ);
     delay(10);
 }
 
@@ -29,9 +29,9 @@ ServoController::setAngle(uint8_t channel, float deg){
     uint16_t pulse = (uint16_t)(SERVO_MIN + (deg / 180.0f) * (SERVO_MAX - SERVO_MIN));
 
     if(channel < MAX_CHANNEL_PER_BOARD){
-        pwm1.setPWM(channel, 0, pulse);
+        priPwm.setPWM(channel, 0, pulse);
     } else {
-        pwm2.setPWM(channel - MAX_CHANNEL_PER_BOARD, 0, pulse);
+        secPwm.setPWM(channel - MAX_CHANNEL_PER_BOARD, 0, pulse);
     }
 
 }

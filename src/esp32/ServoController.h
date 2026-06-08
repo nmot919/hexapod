@@ -27,7 +27,7 @@ class ServoController{
         void setAngle(uint8_t channel, float deg);
 
         static ServoController* _instance;
-        Adafruit_PWMServoDriver pwm1 = Adafruit_PWMServoDriver(0x41);
-        Adafruit_PWMServoDriver pwm2 = Adafruit_PWMServoDriver(0x40);
+        Adafruit_PWMServoDriver priPwm = Adafruit_PWMServoDriver(0x41);
+        Adafruit_PWMServoDriver secPwm = Adafruit_PWMServoDriver(0x40);
 
 };
