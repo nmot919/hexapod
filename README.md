@@ -1,3 +1,4 @@
+
 # Lightweight Robot Simulator and Movement Verifier
 
 A lightweight 3D robot simulation environment designed to assist with robot development, testing, and validation before deploying code to physical hardware.
@@ -6,6 +7,8 @@ Originally developed for a hexapod robot project, the simulator can be adapted t
 
 ###*NOTE:
 This project is a heavy WIP since it was developed specifically for a hexapod robot I built and has considerable questionable design choices that makes it difficult to model other robots right now. Further development is planned to neaten things up and make it more useable.
+
+[Hexapod_Video.webm](https://github.com/user-attachments/assets/1b0718a9-f99f-4d19-8294-75fef193892c)
 
 ## Features
 
