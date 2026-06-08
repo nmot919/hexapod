@@ -4,6 +4,9 @@ A lightweight 3D robot simulation environment designed to assist with robot deve
 
 Originally developed for a hexapod robot project, the simulator can be adapted to virtually any robot platform that relies on inverse kinematics and gait generation. It provides a visual environment for verifying movement algorithms, allowing designers to identify issues early in the development process and reduce debugging time on real hardware.
 
+###*NOTE:
+This project is a heavy WIP since it was developed specifically for a hexapod robot I built and has considerable questionable design choices that makes it difficult to model other robots right now. Further development is planned to neaten things up and make it more useable.
+
 ## Features
 
 ### 3D Robot Simulation
